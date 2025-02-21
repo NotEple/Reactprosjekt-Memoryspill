@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+[tabindex]:focus {
+  outline: 2px solid #646cff;
+}
+
+.card:hover {
+  outline: 2px solid #646cff;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  display: block;
+  border-radius: 8px;
+}
+
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.flashing {
+  animation: flash 2s infinite;
+  outline: 2px solid white;
+}
+
+.flashing:hover {
+  animation: none;
+  outline: 2px solid white;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
