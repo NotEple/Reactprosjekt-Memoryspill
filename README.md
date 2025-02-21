@@ -1,4 +1,4 @@
-# React memory game built in React + Vite + TS.
+# React memory game built in React + Vite + TS + TailwindCSS.
 
 ```
 npm install
